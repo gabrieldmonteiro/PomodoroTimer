@@ -1,0 +1,9 @@
+.imgStyle{
+    width: 15%;
+    height: 15%;        
+}
+
+#pTimer{
+    font-size: 60pt;
+    font-family: 'Consolas';
+}

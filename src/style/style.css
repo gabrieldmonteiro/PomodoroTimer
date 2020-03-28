@@ -1,3 +1,19 @@
+body{
+background-color: #77777733;
+}
+
+a{
+    color: rgb(42, 145, 59);
+    font-weight: bold;
+}
+a:hover{
+    color: red;
+}
+
+a.active{
+    color:red;
+}
+
 .imgStyle {
     width: 15%;
     height: 15%;
@@ -30,6 +46,43 @@
     margin-top: -40px;
     text-align: right;
     display: none;
+}
+
+#containerPomodoro {
+    padding: 0px 0px;
+    margin-top: 3%;
+    font-weight: 500;
+    font-family: Arial;
+}
+#containerAbout {
+    padding: 0px 0px;
+    margin-top: 3%;
+    font-weight: 500;
+    font-family: Arial;
+}
+
+.fa-github{
+    color:black;
+    display: block;
+    font-size: 40pt;
+    margin-right: 10px;    
+}
+.fa-linkedin{
+    color:#0E76A8;
+    display: block;
+    font-size: 40pt;
+    margin-right: 10px;    
+}
+.fa-twitter{
+    color:#1DA1F2;
+    display: block;
+    font-size: 40pt;
+    margin-right: 10px;    
+}
+
+.smLinks{
+    text-align: initial;
+    margin-left: 30%;
 }
 
 @media (max-width: 990px) {

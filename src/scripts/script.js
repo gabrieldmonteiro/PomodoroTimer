@@ -5,8 +5,8 @@ var st;
 var btControl = true;
 var info = $('#timer').html();
 var shortBreakCounter = -1;
-var shortBreakTime = 300 ;
-var longBreakTime = 2000;
+var shortBreakTime = 300;
+var longBreakTime = 1800;
 var time = 1500;
 function startTimer() {
     if (time == 0) {

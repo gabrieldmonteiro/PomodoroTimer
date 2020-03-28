@@ -35,7 +35,7 @@
 
 
       <div class="container" id="containerTask">
-          Task Counter: <span id="Tcounter">0</span>
+          <b>Task Counter:</b> <span id="Tcounter">0</span>
           <button type="button" id="btnResetTask" class="btn btn-danger" onclick="resetTaskCount()">Reset</button>
       </div>
 
@@ -57,7 +57,10 @@
 
 
 
-
+    <div id="audiosDiv">
+    <audio id="audioBeep" src="./audio/beep.mp3" muted ="true"  ></audio>
+    <audio id="audioCongrats" src="./audio/congrats.mp3" muted ="true"  ></audio>
+  </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

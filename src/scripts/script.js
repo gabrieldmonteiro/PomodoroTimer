@@ -5,11 +5,9 @@ var st;
 var btControl = true;
 var info = $('#timer').html();
 var shortBreakCounter = -1;
-var timeSec = 1; //Config Set -- 1 = Tests
-// Tempo em segundos
-//time = 1500;  //25 min 
-time = timeSec;  //25 min 
-
+var shortBreakTime = 300 ;
+var longBreakTime = 2000;
+var time = 1500;
 function startTimer() {
     if (time == 0) {
         //alert('Pressione RESET para resetar o timer!')
@@ -47,7 +45,9 @@ function countdown() {
     } else {
         btControl = true;
         $("#timer").html('00:00');
+        playSoundTimer();
         $("#timer").attr('style', 'color:red');
+
     }
 }
 //-------------------------------------------------------
@@ -100,25 +100,26 @@ function addTaskCount() {
     if (shortBreakCounter != 10 || shortBreakCounter != 0) {
 
         if (shortBreakCounter == 5) {
-            nC--;                        
+            nC--;
             confirm("5 Tasks in a row... Take a short break");
-            time = 1;
+            playSoundCongrats();
+            time = shortBreakTime;
             $('#Tcounter').html(nC);
             $('#pBreak').html("Short Break");
             $('#pBreak').css("color", "green");
             $('#pBreak').css("display", "block");
         } else {
             if (shortBreakCounter == 11) {
-
                 nC--;
                 confirm("10 Tasks in a row... Take a Long break");
-                time = 2;
+                playSoundCongrats();
+                time = longBreakTime;
                 shortBreakCounter = -1;
                 $('#Tcounter').html(nC);
                 $('#pBreak').html("Long Break");
-                $('#pBreak').css("color", "cyan");
+                $('#pBreak').css("color", "orange");
                 $('#pBreak').css("display", "block");
-            }else{
+            } else {
 
             }
         }
@@ -131,3 +132,17 @@ function resetTaskCount() {
     nC = 0;
 }
 
+//Audios
+function playSoundTimer() {
+    var audio = document.getElementById("audioBeep");
+    audio.muted = false;
+    audio.currentTime = 0;
+    audio.play();
+}
+
+function playSoundCongrats() {
+    var audio = document.getElementById("audioCongrats");
+    audio.muted = false;
+    audio.currentTime = 0;
+    audio.play();
+}

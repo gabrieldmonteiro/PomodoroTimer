@@ -7,10 +7,11 @@ var info = $('#timer').html();
 var shortBreakCounter = -1;
 var shortBreakTime = 300;
 var longBreakTime = 1800;
+var initTime = 1500;
 var time = 1500;
 function startTimer() {
     if (time == 0) {
-        //alert('Pressione RESET para resetar o timer!')
+
     }
     if (btControl) {
         countdown();
@@ -60,21 +61,19 @@ function pauseTimer() {
 //Funcao STOP
 function stopTimer() {
     info = $('#timer').html();
-    if (info != '25:00') {
-        //ans = confirm('Tem certeza que deseja zerar o cronometro?');
+    if (info != '25:00') {        
         ans = true;
         if (ans) {
             time = 0;
             btControl = true;
         }
     } else {
-        alert('O timer marca 25:00')
+        alert('Timer = 25:00')
     }
 }
 //----------------------------------------------------------
 //Funcao RESET
-function resetTimer() {
-    //ans = confirm('Tem certeza que deseja resetar o cronometro?');
+function resetTimer() {       
     ans = true;
     if (ans) {
         clearTimeout(st);
@@ -84,7 +83,7 @@ function resetTimer() {
 }
 function r() {
     $('#timer').html('25:00');
-    time = timeSec;
+    time = initTime;
     $('#timer').attr('style', 'color:black');
 }
 //----------------------------------------------------------

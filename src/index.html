@@ -8,35 +8,56 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/style/style.css">
+    <link rel="stylesheet" href="../src/style/style.css">    
+
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   </head>
   <body>
-      <nav class="nav justify-content-center">                
+      <nav class="nav justify-content-center" id="idNavbar">                
         <a class="nav-link active" href="#">Active link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled" href="#">Disabled link</a>
+        <a class="nav-link" href="#">What is Pomodoro timer?</a>
+        <a class="nav-link" href="#">About Dev</a>
       </nav>
-      <div class="container">
+
+      <center>
+      <div class="container" id="containerTomato">
             <img src="../src/img/tomato.png" class="imgStyle" alt="">     
       </div>
-
-      <div class="container">
+      <div class="container" id="containerTimer">
           <p id="pTimer">TIMER <span id="timer">25:00</span></p>
       </div>
-      <div class="container">
-          Task Counter: <span id="Tcounter">0</span>
-          <button type="button" class="btn btn-danger" onclick="resetTaskCount()">Reset</button>
+
+      <div class="container" id="containerBreak">
+          <p id="pBreak">Short Break</p>
       </div>
 
-     <div class="container">
-            <button type="button" class="btn btn-primary" onclick="startTimer()">Start</button>
-            <button type="button" class="btn btn-primary" onclick="pauseTimer()">Pause</button>
-            <button type="button" class="btn btn-primary" onclick="stopTimer()">Stop</button>
-            <button type="button" class="btn btn-primary" onclick="resetTimer()">Reset</button>                       
-     </div>
 
 
-      
+      <div class="container" id="containerTask">
+          Task Counter: <span id="Tcounter">0</span>
+          <button type="button" id="btnResetTask" class="btn btn-danger" onclick="resetTaskCount()">Reset</button>
+      </div>
+
+      <div class="container" id="containerButtons">
+             <button type="button" class="btn btn-primary btn-functions" onclick="startTimer()">
+              <i class="fas fa-play"></i>
+            </button>
+             <button type="button" class="btn btn-primary btn-functions" onclick="pauseTimer()">
+              <i class="fas fa-pause"></i>
+            </button>
+             <button type="button" class="btn btn-primary btn-functions" onclick="stopTimer()">
+              <i class="fas fa-stop"></i>
+            </button>
+             <button type="button" class="btn btn-primary btn-functions" onclick="resetTimer()">
+              <i class="fas fa-undo"></i>
+            </button>                       
+      </div>       
+      </center>
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

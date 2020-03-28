@@ -1,9 +1,130 @@
-.imgStyle{
+.imgStyle {
     width: 15%;
-    height: 15%;        
+    height: 15%;
 }
 
-#pTimer{
+.btn-functions {
+    margin-left: 50px;
+}
+
+#pTimer {
     font-size: 60pt;
     font-family: 'Consolas';
+}
+
+#btnResetTask{
+margin-left: 5%;
+}
+
+#pBreak{
+    color:green;
+    font-weight: bolder;
+    font-size: 28pt;
+    position:absolute;
+    margin-left: 3.9in;
+    margin-top: -40px;          
+    text-align:right;
+    display:none;
+}
+
+@media (max-width: 990px) {
+    #containerTomato {
+        padding: 0px 0px;
+        margin-top: 1in;
+    }
+
+    #containerTimer {
+        padding: 0px 0px;
+        margin-top: 1in;
+    }
+
+    #containerTask {
+        padding: 0px 0px;
+        margin-top: 1in;
+    }
+
+    #containerButtons {
+        padding: 0px 0px;
+        margin-top: 1in;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #pBreak{
+        color:green;
+        font-weight: bolder;
+        font-size: 28pt;
+        position:absolute;
+        margin-left: 3.9in;
+        margin-top: -40px;          
+        text-align:right;
+        display:none;
+    }
+    
+}
+
+@media (min-width: 990px) {
+    #containerTomato {
+        padding: 0px 0px;
+        margin-top: 2%;
+    }
+
+    #containerTimer {
+        padding: 0px 0px;
+        margin-top: 5%;
+    }
+
+    #containerTask {
+        padding: 0px 0px;
+        margin-top: 3%;
+    }
+
+    #containerButtons {
+        padding: 0px 0px;
+        margin-top: 3%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #pBreak{
+        color:green;
+        font-weight: bolder;
+        font-size: 18pt;
+        position:absolute;
+        margin-left: 6.6in;
+        margin-top: -40px;  
+        margin-bottom: px;        
+        text-align:right;
+        display:none;
+    }
+    
+}
+
+@media (max-width: 466px) {
+    #pTimer {
+        font-size: 40pt;
+        font-family: 'Consolas';
+    }
+
+    #containerTomato {
+        padding: 0px 0px;
+        margin-top: 2%;
+    }
+
+    #containerTimer {
+        padding: 0px 0px;
+        margin-top: 5%;
+    }
+
+    #containerTask {
+        padding: 0px 0px;
+        margin-top: 5%;
+    }
+
+    #containerButtons {
+        padding: 0px 0px;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
